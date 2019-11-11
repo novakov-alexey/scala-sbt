@@ -9,7 +9,7 @@ steps:
   displayName: Build and push an image to container registry
   inputs:
     command: buildAndPush
-    repository: jenkins
+    repository: sbt
     dockerfile: '$(Build.SourcesDirectory)/debian/Dockerfile'
     containerRegistry: 'cr-connection'
     tags: |
