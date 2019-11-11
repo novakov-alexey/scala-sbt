@@ -13,4 +13,5 @@ steps:
     dockerfile: '$(Build.SourcesDirectory)/debian/Dockerfile'
     containerRegistry: 'cr-connection'
     tags: |
-      $(Build.BuildId)             
+      1.3.3_$(Build.BuildId)             
+
