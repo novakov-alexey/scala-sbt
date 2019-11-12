@@ -13,8 +13,7 @@ steps:
     containerRegistry: 'cr-connection'
     repository: 'sbt'
     command: 'build'
-    Dockerfile: '$(Build.SourcesDirectory)/debian/Dockerfile'
-    buildContext: '$(Build.SourcesDirectory)/debian'
+    Dockerfile: '$(Build.SourcesDirectory)/debian/Dockerfile'    
     tags: |
       $(Build.BuildId)
       latest
