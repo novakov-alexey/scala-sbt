@@ -18,7 +18,7 @@ steps:
     tags: |
       $(Build.BuildId)
       latest
-    arguments: '--build-arg BASE_IMAGE=openjdk:11-jdk-stretch'
+    arguments: '--build-arg BASE_IMAGE_TAG=openjdk:11-jdk-stretch'
 
 - task: Docker@2
   inputs:
