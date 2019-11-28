@@ -14,8 +14,7 @@ steps:
     repository: 'sbt'
     command: 'build'
     Dockerfile: '$(Build.SourcesDirectory)/debian/Dockerfile'    
-    tags: |
-      $(Build.BuildId)
+    tags: |      
       latest
     arguments: '--build-arg BASE_IMAGE_TAG=11-jdk-stretch'
 
@@ -24,7 +23,6 @@ steps:
     containerRegistry: 'cr-connection'
     repository: 'sbt'
     command: 'push'
-    tags: |
-      $(Build.BuildId)
+    tags: |      
       latest
 
