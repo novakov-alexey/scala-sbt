@@ -10,17 +10,17 @@ pool:
 steps:
 - task: Docker@2
   inputs:
-    containerRegistry: 'cr-connection'
+    containerRegistry: 'cr-kss'
     repository: 'sbt'
     command: 'build'
     Dockerfile: '$(Build.SourcesDirectory)/debian/Dockerfile'    
     tags: |      
       latest
-    arguments: '--build-arg BASE_IMAGE_TAG=11-jdk-stretch --build-arg SBT_VERSION=1.3.10'
+    arguments: '--build-arg BASE_IMAGE_TAG=11-jdk-stretch --build-arg SBT_VERSION=1.4.0'
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'cr-connection'
+    containerRegistry: 'cr-kss'
     repository: 'sbt'
     command: 'push'
     tags: |      
